@@ -67,6 +67,18 @@ namespace PhanMenBanMayTinh
                 MessageBox.Show("Lỗi kết nối");
             }
         }
+
+        private void text_LoginName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar >='0' && e.KeyChar <='9' && e.KeyChar == (char)8)
+            {
+                e.Handled = false;
+            } else
+            {
+                e.Handled = true;
+                MessageBox.Show("Nhập sai tài khoản!");
+            }
+        }
     }
             
 }

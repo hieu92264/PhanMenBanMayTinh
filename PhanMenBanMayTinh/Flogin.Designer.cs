@@ -126,6 +126,7 @@
             this.text_LoginName.Name = "text_LoginName";
             this.text_LoginName.Size = new System.Drawing.Size(170, 20);
             this.text_LoginName.TabIndex = 1;
+            this.text_LoginName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_LoginName_KeyPress);
             // 
             // Flogin
             // 
