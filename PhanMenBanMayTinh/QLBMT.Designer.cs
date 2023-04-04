@@ -149,15 +149,15 @@
             this.panel1.Controls.Add(this.BTNSearch);
             this.panel1.Location = new System.Drawing.Point(73, 27);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(582, 100);
+            this.panel1.Size = new System.Drawing.Size(582, 83);
             this.panel1.TabIndex = 5;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 158);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 116);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(729, 219);
+            this.dataGridView1.Size = new System.Drawing.Size(729, 261);
             this.dataGridView1.TabIndex = 5;
             // 
             // QLBMT
