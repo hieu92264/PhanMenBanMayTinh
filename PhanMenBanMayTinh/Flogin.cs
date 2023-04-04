@@ -13,7 +13,7 @@ using System.Windows.Forms;
 namespace PhanMenBanMayTinh
 {
     public partial class Flogin : Form
-    {
+    { //cmt
         public Flogin()
         {
             InitializeComponent();
