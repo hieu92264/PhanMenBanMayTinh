@@ -42,7 +42,7 @@ namespace PhanMenBanMayTinh
             try
             {
                 string query = "select *from Accounts where id = '" + username + "'and PASS ='" + password + "'";
-                string stringconnection = "Data Source=ADMIN-PC;Initial Catalog=QLMT2;Integrated Security=True";
+                string stringconnection = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Admin\\source\\repos\\PhanMenBanMayTinh\\PhanMenBanMayTinh\\QLMT.mdf;Integrated Security=True";
                 using (SqlConnection connection = new SqlConnection(stringconnection))
                 {
                     connection.Open();

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QLBMT));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ToolStrip_Home = new System.Windows.Forms.ToolStripMenuItem();
@@ -38,12 +37,12 @@
             this.ToolStrip_Latidue = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStrip_Inspiron = new System.Windows.Forms.ToolStripMenuItem();
             this.Tooltrip_Account = new System.Windows.Forms.ToolStripMenuItem();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.textSearch = new System.Windows.Forms.TextBox();
             this.BTNSearch = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.hoáĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -54,7 +53,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStrip_Home,
             this.MenuProduct,
-            this.Tooltrip_Account});
+            this.Tooltrip_Account,
+            this.hoáĐơnToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(753, 24);
@@ -111,11 +111,6 @@
             this.Tooltrip_Account.Text = "Account";
             this.Tooltrip_Account.Click += new System.EventHandler(this.accountToolStripMenuItem_Click);
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
             // textSearch
             // 
             this.textSearch.Location = new System.Drawing.Point(167, 39);
@@ -160,11 +155,17 @@
             this.dataGridView1.Size = new System.Drawing.Size(729, 261);
             this.dataGridView1.TabIndex = 5;
             // 
+            // hoáĐơnToolStripMenuItem
+            // 
+            this.hoáĐơnToolStripMenuItem.Name = "hoáĐơnToolStripMenuItem";
+            this.hoáĐơnToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.hoáĐơnToolStripMenuItem.Text = "Hoá đơn";
+            // 
             // QLBMT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(753, 389);
+            this.ClientSize = new System.Drawing.Size(753, 380);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
@@ -192,12 +193,12 @@
         private System.Windows.Forms.ToolStripMenuItem ToolStrip_Latidue;
         private System.Windows.Forms.ToolStripMenuItem ToolStrip_Inspiron;
         private System.Windows.Forms.ToolStripMenuItem Tooltrip_Account;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.TextBox textSearch;
         private System.Windows.Forms.Button BTNSearch;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ToolStripMenuItem hoáĐơnToolStripMenuItem;
     }
 }
 

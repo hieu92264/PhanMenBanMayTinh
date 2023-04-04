@@ -32,6 +32,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.BTN_changePass = new System.Windows.Forms.Button();
+            this.BTN_LogOut = new System.Windows.Forms.Button();
+            this.BTN_ = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -40,7 +42,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(61, 22);
+            this.label1.Location = new System.Drawing.Point(34, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(135, 16);
             this.label1.TabIndex = 0;
@@ -52,7 +54,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(282, 239);
+            this.panel1.Size = new System.Drawing.Size(213, 309);
             this.panel1.TabIndex = 1;
             // 
             // dataGridView1
@@ -60,25 +62,45 @@
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 57);
+            this.dataGridView1.Location = new System.Drawing.Point(17, 53);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(170, 241);
             this.dataGridView1.TabIndex = 2;
             // 
             // BTN_changePass
             // 
-            this.BTN_changePass.Location = new System.Drawing.Point(346, 52);
+            this.BTN_changePass.Location = new System.Drawing.Point(185, 327);
             this.BTN_changePass.Name = "BTN_changePass";
             this.BTN_changePass.Size = new System.Drawing.Size(79, 23);
             this.BTN_changePass.TabIndex = 2;
             this.BTN_changePass.Text = "Đổi mật khẩu";
             this.BTN_changePass.UseVisualStyleBackColor = true;
             // 
+            // BTN_LogOut
+            // 
+            this.BTN_LogOut.Location = new System.Drawing.Point(350, 327);
+            this.BTN_LogOut.Name = "BTN_LogOut";
+            this.BTN_LogOut.Size = new System.Drawing.Size(75, 23);
+            this.BTN_LogOut.TabIndex = 3;
+            this.BTN_LogOut.Text = "Đăng xuất";
+            this.BTN_LogOut.UseVisualStyleBackColor = true;
+            // 
+            // BTN_
+            // 
+            this.BTN_.Location = new System.Drawing.Point(29, 327);
+            this.BTN_.Name = "BTN_";
+            this.BTN_.Size = new System.Drawing.Size(75, 23);
+            this.BTN_.TabIndex = 4;
+            this.BTN_.Text = "Chốt ca";
+            this.BTN_.UseVisualStyleBackColor = true;
+            // 
             // Faccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(456, 396);
+            this.Controls.Add(this.BTN_);
+            this.Controls.Add(this.BTN_LogOut);
             this.Controls.Add(this.BTN_changePass);
             this.Controls.Add(this.panel1);
             this.Name = "Faccount";
@@ -96,5 +118,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button BTN_changePass;
+        private System.Windows.Forms.Button BTN_LogOut;
+        private System.Windows.Forms.Button BTN_;
     }
 }
