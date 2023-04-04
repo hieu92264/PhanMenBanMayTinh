@@ -16,5 +16,27 @@ namespace PhanMenBanMayTinh
         {
             InitializeComponent();
         }
+
+        private void toolStripComboBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void accountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(Tooltrip_Account.Selected)
+            {
+                Faccount frm = new Faccount();
+                frm.Show();
+            }
+        }
+
+        private void ToolStrip_Home_Click(object sender, EventArgs e)
+        {
+            if(ToolStrip_Home.Selected)
+            {
+                this.Show();
+            }
+        }
     }
 }

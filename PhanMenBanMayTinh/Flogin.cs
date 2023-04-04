@@ -70,13 +70,9 @@ namespace PhanMenBanMayTinh
 
         private void text_LoginName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(e.KeyChar >='0' && e.KeyChar <='9' && e.KeyChar == (char)8)
+            if(char.IsDigit(e.KeyChar) && char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
-            } else
-            {
-                e.Handled = true;
-                MessageBox.Show("Nhập sai tài khoản!");
             }
         }
     }
