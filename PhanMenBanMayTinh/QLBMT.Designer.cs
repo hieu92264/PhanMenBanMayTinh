@@ -37,15 +37,15 @@
             this.ToolStrip_Latidue = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStrip_Inspiron = new System.Windows.Forms.ToolStripMenuItem();
             this.Tooltrip_Account = new System.Windows.Forms.ToolStripMenuItem();
+            this.hoáĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textSearch = new System.Windows.Forms.TextBox();
             this.BTNSearch = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.hoáĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dgv_Home = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Home)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -57,7 +57,7 @@
             this.hoáĐơnToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(753, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(872, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -111,6 +111,12 @@
             this.Tooltrip_Account.Text = "Account";
             this.Tooltrip_Account.Click += new System.EventHandler(this.accountToolStripMenuItem_Click);
             // 
+            // hoáĐơnToolStripMenuItem
+            // 
+            this.hoáĐơnToolStripMenuItem.Name = "hoáĐơnToolStripMenuItem";
+            this.hoáĐơnToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.hoáĐơnToolStripMenuItem.Text = "Hoá đơn";
+            // 
             // textSearch
             // 
             this.textSearch.Location = new System.Drawing.Point(167, 39);
@@ -142,31 +148,28 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.textSearch);
             this.panel1.Controls.Add(this.BTNSearch);
-            this.panel1.Location = new System.Drawing.Point(73, 27);
+            this.panel1.Location = new System.Drawing.Point(116, 27);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(582, 83);
             this.panel1.TabIndex = 5;
             // 
-            // dataGridView1
+            // dgv_Home
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 116);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(729, 261);
-            this.dataGridView1.TabIndex = 5;
-            // 
-            // hoáĐơnToolStripMenuItem
-            // 
-            this.hoáĐơnToolStripMenuItem.Name = "hoáĐơnToolStripMenuItem";
-            this.hoáĐơnToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.hoáĐơnToolStripMenuItem.Text = "Hoá đơn";
+            this.dgv_Home.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.dgv_Home.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_Home.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Home.GridColor = System.Drawing.Color.DarkGray;
+            this.dgv_Home.Location = new System.Drawing.Point(12, 116);
+            this.dgv_Home.Name = "dgv_Home";
+            this.dgv_Home.Size = new System.Drawing.Size(848, 494);
+            this.dgv_Home.TabIndex = 5;
             // 
             // QLBMT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(753, 380);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(872, 622);
+            this.Controls.Add(this.dgv_Home);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -177,7 +180,7 @@
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Home)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,7 +200,7 @@
         private System.Windows.Forms.Button BTNSearch;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_Home;
         private System.Windows.Forms.ToolStripMenuItem hoáĐơnToolStripMenuItem;
     }
 }

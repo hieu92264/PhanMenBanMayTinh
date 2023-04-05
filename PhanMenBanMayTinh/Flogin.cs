@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Text;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,7 +14,7 @@ using System.Windows.Forms;
 namespace PhanMenBanMayTinh
 {
     public partial class Flogin : Form
-    { //cmt
+    { 
         public Flogin()
         {
             InitializeComponent();
@@ -42,9 +43,9 @@ namespace PhanMenBanMayTinh
             try
             {
                 string query = "select *from Accounts where id = '" + username + "'and PASS ='" + password + "'";
-                string stringconnection = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Admin\\source\\repos\\PhanMenBanMayTinh\\PhanMenBanMayTinh\\QLMT.mdf;Integrated Security=True";
+                string stringconnection = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Admin\\source\\repos\\PhanMenBanMayTinh\\PhanMenBanMayTinh\\QLMT.mdf;Integrated Security=True;Connect Timeout=30";
                 using (SqlConnection connection = new SqlConnection(stringconnection))
-                {
+                { 
                     connection.Open();
                     SqlCommand cmd = new SqlCommand(query, connection);
                     SqlDataReader data = cmd.ExecuteReader();
