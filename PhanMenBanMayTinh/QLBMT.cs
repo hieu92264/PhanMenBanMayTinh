@@ -55,5 +55,16 @@ namespace PhanMenBanMayTinh
         {
 
         }
+
+        private void BTNSearch_Click(object sender, EventArgs e)
+        {
+            if(textSearch != null)
+            {
+                string query = "select *from Products where ProductName like '%"+textSearch.Text+"%'";
+                DataProvide dataProvide = new DataProvide();
+                dgv_Home.DataSource = null;
+                dgv_Home.DataSource =dataProvide.ExcuteQuery(query);
+            }
+        }
     }
 }

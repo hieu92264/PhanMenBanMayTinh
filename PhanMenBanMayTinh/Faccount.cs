@@ -16,5 +16,35 @@ namespace PhanMenBanMayTinh
         {
             InitializeComponent();
         }
+
+        private void Faccount_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgv_account_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void BTN__Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BTN_changePass_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BTN_LogOut_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -124,6 +124,7 @@
             this.BTNSearch.TabIndex = 3;
             this.BTNSearch.Text = "Tìm kiếm";
             this.BTNSearch.UseVisualStyleBackColor = true;
+            this.BTNSearch.Click += new System.EventHandler(this.BTNSearch_Click);
             // 
             // label1
             // 
@@ -140,7 +141,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.textSearch);
             this.panel1.Controls.Add(this.BTNSearch);
-            this.panel1.Location = new System.Drawing.Point(141, 53);
+            this.panel1.Location = new System.Drawing.Point(109, 55);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(582, 83);
             this.panel1.TabIndex = 5;
