@@ -53,9 +53,9 @@
             this.MenuProduct,
             this.Tooltrip_Account,
             this.hoáĐơnToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(3, 64);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(866, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(872, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -74,25 +74,25 @@
             this.ToolStrip_Latidue,
             this.ToolStrip_Inspiron});
             this.Menu_Product_Dell.Name = "Menu_Product_Dell";
-            this.Menu_Product_Dell.Size = new System.Drawing.Size(180, 22);
+            this.Menu_Product_Dell.Size = new System.Drawing.Size(134, 22);
             this.Menu_Product_Dell.Text = "Laptop Dell";
             // 
             // ToolStrip_Vostro
             // 
             this.ToolStrip_Vostro.Name = "ToolStrip_Vostro";
-            this.ToolStrip_Vostro.Size = new System.Drawing.Size(180, 22);
+            this.ToolStrip_Vostro.Size = new System.Drawing.Size(140, 22);
             this.ToolStrip_Vostro.Text = "Dell Vostro";
             // 
             // ToolStrip_Latidue
             // 
             this.ToolStrip_Latidue.Name = "ToolStrip_Latidue";
-            this.ToolStrip_Latidue.Size = new System.Drawing.Size(180, 22);
+            this.ToolStrip_Latidue.Size = new System.Drawing.Size(140, 22);
             this.ToolStrip_Latidue.Text = "Dell Latidue";
             // 
             // ToolStrip_Inspiron
             // 
             this.ToolStrip_Inspiron.Name = "ToolStrip_Inspiron";
-            this.ToolStrip_Inspiron.Size = new System.Drawing.Size(180, 22);
+            this.ToolStrip_Inspiron.Size = new System.Drawing.Size(140, 22);
             this.ToolStrip_Inspiron.Text = "Dell Inspiron";
             // 
             // Tooltrip_Account
@@ -114,6 +114,7 @@
             this.textSearch.Name = "textSearch";
             this.textSearch.Size = new System.Drawing.Size(254, 20);
             this.textSearch.TabIndex = 2;
+            this.textSearch.TextChanged += new System.EventHandler(this.textSearch_TextChanged);
             // 
             // BTNSearch
             // 
@@ -139,7 +140,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.textSearch);
             this.panel1.Controls.Add(this.BTNSearch);
-            this.panel1.Location = new System.Drawing.Point(175, 91);
+            this.panel1.Location = new System.Drawing.Point(141, 53);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(582, 83);
             this.panel1.TabIndex = 5;
@@ -152,9 +153,9 @@
             this.dgv_Home.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Home.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgv_Home.GridColor = System.Drawing.Color.DarkGray;
-            this.dgv_Home.Location = new System.Drawing.Point(3, 190);
+            this.dgv_Home.Location = new System.Drawing.Point(0, 193);
             this.dgv_Home.Name = "dgv_Home";
-            this.dgv_Home.Size = new System.Drawing.Size(866, 429);
+            this.dgv_Home.Size = new System.Drawing.Size(872, 429);
             this.dgv_Home.TabIndex = 5;
             // 
             // QLBMT

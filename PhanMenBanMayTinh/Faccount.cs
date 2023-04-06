@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace PhanMenBanMayTinh
 {
-    public partial class Faccount : MaterialSkin.Controls.MaterialForm
+    public partial class Faccount : Form
     {
         public Faccount()
         {

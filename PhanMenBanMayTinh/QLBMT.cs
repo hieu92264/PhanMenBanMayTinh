@@ -12,7 +12,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace PhanMenBanMayTinh
 {
-    public partial class QLBMT : MaterialSkin.Controls.MaterialForm
+    public partial class QLBMT : Form
     {
         public QLBMT()
         {
@@ -29,7 +29,7 @@ namespace PhanMenBanMayTinh
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi kết nối!");
+                MessageBox.Show(ex.Message);
             }
         }
         private void toolStripComboBox1_Click(object sender, EventArgs e)
@@ -47,6 +47,11 @@ namespace PhanMenBanMayTinh
         }
 
         private void materialButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textSearch_TextChanged(object sender, EventArgs e)
         {
 
         }

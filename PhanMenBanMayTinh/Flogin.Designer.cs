@@ -48,7 +48,7 @@
             this.panel1.Controls.Add(this.BTN_Login);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(6, 67);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(328, 156);
             this.panel1.TabIndex = 0;
@@ -133,7 +133,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(342, 241);
+            this.ClientSize = new System.Drawing.Size(352, 176);
             this.Controls.Add(this.panel1);
             this.Name = "Flogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
