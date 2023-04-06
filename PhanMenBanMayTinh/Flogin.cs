@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace PhanMenBanMayTinh
 {
-    public partial class Flogin : Form
+    public partial class Flogin : MaterialSkin.Controls.MaterialForm
     { 
         public Flogin()
         {

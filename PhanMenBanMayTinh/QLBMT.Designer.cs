@@ -53,9 +53,9 @@
             this.MenuProduct,
             this.Tooltrip_Account,
             this.hoáĐơnToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Location = new System.Drawing.Point(3, 64);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(872, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(866, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -139,7 +139,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.textSearch);
             this.panel1.Controls.Add(this.BTNSearch);
-            this.panel1.Location = new System.Drawing.Point(116, 27);
+            this.panel1.Location = new System.Drawing.Point(175, 91);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(582, 83);
             this.panel1.TabIndex = 5;
@@ -152,9 +152,9 @@
             this.dgv_Home.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Home.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgv_Home.GridColor = System.Drawing.Color.DarkGray;
-            this.dgv_Home.Location = new System.Drawing.Point(0, 128);
+            this.dgv_Home.Location = new System.Drawing.Point(3, 190);
             this.dgv_Home.Name = "dgv_Home";
-            this.dgv_Home.Size = new System.Drawing.Size(872, 494);
+            this.dgv_Home.Size = new System.Drawing.Size(866, 429);
             this.dgv_Home.TabIndex = 5;
             // 
             // QLBMT

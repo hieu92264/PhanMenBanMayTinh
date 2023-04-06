@@ -12,7 +12,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace PhanMenBanMayTinh
 {
-    public partial class QLBMT : Form
+    public partial class QLBMT : MaterialSkin.Controls.MaterialForm
     {
         public QLBMT()
         {
@@ -44,6 +44,11 @@ namespace PhanMenBanMayTinh
                 Faccount frm = new Faccount();
                 frm.Show();
             }
+        }
+
+        private void materialButton1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

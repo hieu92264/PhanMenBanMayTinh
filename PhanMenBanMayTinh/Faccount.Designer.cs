@@ -52,9 +52,9 @@
             // 
             this.panel1.Controls.Add(this.dgv_account);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(12, 67);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(213, 309);
+            this.panel1.Size = new System.Drawing.Size(413, 254);
             this.panel1.TabIndex = 1;
             // 
             // dgv_account
@@ -64,7 +64,7 @@
             this.dgv_account.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_account.Location = new System.Drawing.Point(17, 53);
             this.dgv_account.Name = "dgv_account";
-            this.dgv_account.Size = new System.Drawing.Size(170, 241);
+            this.dgv_account.Size = new System.Drawing.Size(170, 186);
             this.dgv_account.TabIndex = 2;
             // 
             // BTN_changePass
