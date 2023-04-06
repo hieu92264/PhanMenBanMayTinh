@@ -11,7 +11,7 @@ namespace PhanMenBanMayTinh
 {
     public class DataProvide
     {
-        //cmt
+        
         private string stringconnection = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename="+Application.StartupPath+@"\QLMT.mdf;Integrated Security=True;Connect Timeout=30";
         public DataTable ExcuteQuery(string query) // tra ve mot bang database
         {
