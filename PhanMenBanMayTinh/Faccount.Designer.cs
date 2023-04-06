@@ -30,12 +30,12 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_account = new System.Windows.Forms.DataGridView();
             this.BTN_changePass = new System.Windows.Forms.Button();
             this.BTN_LogOut = new System.Windows.Forms.Button();
             this.BTN_ = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_account)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -50,22 +50,22 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.dgv_account);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(213, 309);
             this.panel1.TabIndex = 1;
             // 
-            // dataGridView1
+            // dgv_account
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 53);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(170, 241);
-            this.dataGridView1.TabIndex = 2;
+            this.dgv_account.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgv_account.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_account.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_account.Location = new System.Drawing.Point(17, 53);
+            this.dgv_account.Name = "dgv_account";
+            this.dgv_account.Size = new System.Drawing.Size(170, 241);
+            this.dgv_account.TabIndex = 2;
             // 
             // BTN_changePass
             // 
@@ -107,7 +107,7 @@
             this.Text = "Faccount";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_account)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -116,7 +116,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_account;
         private System.Windows.Forms.Button BTN_changePass;
         private System.Windows.Forms.Button BTN_LogOut;
         private System.Windows.Forms.Button BTN_;

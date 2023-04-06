@@ -43,29 +43,22 @@ namespace PhanMenBanMayTinh
             try
             {
                 string query = "select *from Accounts where id = '" + username + "'and PASS ='" + password + "'";
-                string stringconnection = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Admin\\source\\repos\\PhanMenBanMayTinh\\PhanMenBanMayTinh\\QLMT.mdf;Integrated Security=True;Connect Timeout=30";
-                using (SqlConnection connection = new SqlConnection(stringconnection))
-                { 
-                    connection.Open();
-                    SqlCommand cmd = new SqlCommand(query, connection);
-                    SqlDataReader data = cmd.ExecuteReader();
-                    if (data.Read())
-                    {
-                        this.Hide();
-                        QLBMT frm = new QLBMT();
-                        frm.ShowDialog();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Tài khoản hoặc mật khẩu không đúng!");
-                    }
-                    connection.Close();
+                DataProvide dataProvide = new DataProvide();
+                if(dataProvide.ExcuteNonQuery(query) != 0)
+                {
+                    this.Hide();
+                    QLBMT frm = new QLBMT();
+                    frm.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Tài khoản hoặc mật khẩu không đúng!");
                 }
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi kết nối");
+                MessageBox.Show(ex.Message);
             }
         }
 

@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QLBMT));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.ToolStrip_Home = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuProduct = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu_Product_Dell = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStrip_Vostro = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,7 +50,6 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolStrip_Home,
             this.MenuProduct,
             this.Tooltrip_Account,
             this.hoáĐơnToolStripMenuItem});
@@ -60,13 +58,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(872, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // ToolStrip_Home
-            // 
-            this.ToolStrip_Home.Name = "ToolStrip_Home";
-            this.ToolStrip_Home.Size = new System.Drawing.Size(71, 20);
-            this.ToolStrip_Home.Text = "Trang chủ";
-            this.ToolStrip_Home.Click += new System.EventHandler(this.ToolStrip_Home_Click);
             // 
             // MenuProduct
             // 
@@ -155,13 +146,15 @@
             // 
             // dgv_Home
             // 
+            this.dgv_Home.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Home.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgv_Home.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_Home.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Home.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgv_Home.GridColor = System.Drawing.Color.DarkGray;
-            this.dgv_Home.Location = new System.Drawing.Point(12, 116);
+            this.dgv_Home.Location = new System.Drawing.Point(0, 128);
             this.dgv_Home.Name = "dgv_Home";
-            this.dgv_Home.Size = new System.Drawing.Size(848, 494);
+            this.dgv_Home.Size = new System.Drawing.Size(872, 494);
             this.dgv_Home.TabIndex = 5;
             // 
             // QLBMT
@@ -189,7 +182,6 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem ToolStrip_Home;
         private System.Windows.Forms.ToolStripMenuItem MenuProduct;
         private System.Windows.Forms.ToolStripMenuItem Menu_Product_Dell;
         private System.Windows.Forms.ToolStripMenuItem ToolStrip_Vostro;

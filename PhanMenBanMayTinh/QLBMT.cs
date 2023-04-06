@@ -17,30 +17,21 @@ namespace PhanMenBanMayTinh
         public QLBMT()
         {
             InitializeComponent();
-           /* try
+            this.load_dgv_Home();
+        }
+        public void load_dgv_Home()
+        {
+            try
             {
                 string query = "select *from Products";
-                //string stringconnection = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Admin\\source\\repos\\PhanMenBanMayTinh\\PhanMenBanMayTinh\\QLMT.mdf;Integrated Security=True;Connect Timeout=30";
-                using (SqlConnection connection = new SqlConnection())
-                {
-                    connection.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Admin\\source\\repos\\PhanMenBanMayTinh\\PhanMenBanMayTinh\\QLMT.mdf;Integrated Security=True;Connect Timeout=30";
-                    connection.Open();
-                    SqlCommand cmd = new SqlCommand(query, connection);
-                    SqlDataReader data = cmd.ExecuteReader();
-                    DataTable Data = new DataTable();
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    adapter.Fill(Data);
-                    connection.Close();
-                    dgv_Home.DataSource = Data;
-                }
-
+                DataProvide dataProvide = new DataProvide();
+                dgv_Home.DataSource =dataProvide.ExcuteQuery(query);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi kết nối!");
-            } */
+            }
         }
-
         private void toolStripComboBox1_Click(object sender, EventArgs e)
         {
 
@@ -52,14 +43,6 @@ namespace PhanMenBanMayTinh
             {
                 Faccount frm = new Faccount();
                 frm.Show();
-            }
-        }
-
-        private void ToolStrip_Home_Click(object sender, EventArgs e)
-        {
-            if(ToolStrip_Home.Selected)
-            {
-                this.Show();
             }
         }
     }
