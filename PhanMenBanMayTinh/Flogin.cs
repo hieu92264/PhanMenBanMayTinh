@@ -16,7 +16,7 @@ namespace PhanMenBanMayTinh
     public partial class Flogin : Form
     { 
         public Flogin()
-        { //cmt
+        { //ngan sat thu
             InitializeComponent();
             AcceptButton = BTN_Login;
             CancelButton = BTN_LoginExit;
