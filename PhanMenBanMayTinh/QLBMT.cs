@@ -66,5 +66,15 @@ namespace PhanMenBanMayTinh
                 dgv_Home.DataSource =dataProvide.ExcuteQuery(query);
             }
         }
+
+        private void QLBMT_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult kq;
+            kq = MessageBox.Show("Bạn có thực sự muốn thoát?", "Thông báo!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (kq != DialogResult.OK)
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }

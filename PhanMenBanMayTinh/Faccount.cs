@@ -15,8 +15,21 @@ namespace PhanMenBanMayTinh
         public Faccount()
         {
             InitializeComponent();
+            this.load_data_account();
         }
-
+        public void load_data_account()
+        {
+            try
+            {
+                string query = "select Id, DisplayName from Accounts";
+                DataProvide dataProvide = new DataProvide();
+                dgv_account.DataSource=dataProvide.ExcuteQuery(query);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         private void Faccount_Load(object sender, EventArgs e)
         {
 

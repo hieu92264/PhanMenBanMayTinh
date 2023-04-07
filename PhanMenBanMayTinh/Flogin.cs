@@ -44,7 +44,7 @@ namespace PhanMenBanMayTinh
             {
                 string query = "select *from Accounts where id = '" + username + "'and PASS ='" + password + "'";
                 DataProvide dataProvide = new DataProvide();
-                if(dataProvide.ExcuteNonQuery(query) != 0)
+                if(dataProvide.ExcuteNonQuery(query) >0)
                 {
                     this.Hide();
                     QLBMT frm = new QLBMT();

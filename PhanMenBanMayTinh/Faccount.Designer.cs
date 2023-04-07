@@ -65,7 +65,7 @@
             this.dgv_account.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_account.Location = new System.Drawing.Point(17, 53);
             this.dgv_account.Name = "dgv_account";
-            this.dgv_account.Size = new System.Drawing.Size(170, 148);
+            this.dgv_account.Size = new System.Drawing.Size(379, 148);
             this.dgv_account.TabIndex = 2;
             this.dgv_account.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_account_CellContentClick);
             // 

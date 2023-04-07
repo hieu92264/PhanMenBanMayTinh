@@ -171,6 +171,7 @@
             this.Name = "QLBMT";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý bán máy tính";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.QLBMT_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
