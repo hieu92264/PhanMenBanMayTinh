@@ -16,7 +16,7 @@ namespace PhanMenBanMayTinh
     public partial class Flogin : Form
     { 
         public Flogin()
-        { //ngan sat thu
+        { 
             InitializeComponent();
             AcceptButton = BTN_Login;
             CancelButton = BTN_LoginExit;
@@ -42,9 +42,9 @@ namespace PhanMenBanMayTinh
             string password = text_LoginPass.Text;
             try
             {
-                string query = "select *from Accounts where id = '" + username + "'and PASS ='" + password + "'";
+                string query = "select *from Accounts where Id = " + username + " and Pass ='" + password + "'";
                 DataProvide dataProvide = new DataProvide();
-                if(dataProvide.ExcuteNonQuery(query) >0)
+                if(dataProvide.ExcuteQuery(query).Rows.Count > 0)
                 {
                     this.Hide();
                     QLBMT frm = new QLBMT();
@@ -54,6 +54,7 @@ namespace PhanMenBanMayTinh
                 {
                     MessageBox.Show("Tài khoản hoặc mật khẩu không đúng!");
                 }
+               
 
             }
             catch (Exception ex)
@@ -69,6 +70,7 @@ namespace PhanMenBanMayTinh
                 e.Handled = false;
             }
         }
+
     }
             
 }

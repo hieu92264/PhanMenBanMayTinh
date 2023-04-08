@@ -13,7 +13,7 @@ namespace PhanMenBanMayTinh
     {
 
         private string stringconnection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\QLMT.mdf;Integrated Security=True";
-
+        public DataProvide() { }
         //private string stringconnection = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename="+Application.StartupPath+@"\QLMT.mdf;Integrated Security=True;Connect Timeout=30";
         public DataTable ExcuteQuery(string query) // tra ve mot bang database
         {
@@ -40,6 +40,18 @@ namespace PhanMenBanMayTinh
             }
             return data;
         }
-        
+        public int ExcuteScalar(string query) // tra ve so dong thanh cong
+        {
+            int data = 0;
+            using (SqlConnection connection = new SqlConnection(stringconnection))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand(query, connection);
+                data = (int)command.ExecuteScalar();
+                connection.Close();
+            }
+            return data;
+        }
+
     }
 }
