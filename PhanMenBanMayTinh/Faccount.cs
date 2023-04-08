@@ -52,12 +52,13 @@ namespace PhanMenBanMayTinh
 
         private void BTN_changePass_Click(object sender, EventArgs e)
         {
-
+            ChangePass frm = new ChangePass();
+            frm.ShowDialog();
         }
 
         private void BTN_LogOut_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

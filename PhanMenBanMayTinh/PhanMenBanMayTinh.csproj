@@ -97,6 +97,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChangePass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePass.Designer.cs">
+      <DependentUpon>ChangePass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateBill.Designer.cs">
+      <DependentUpon>CreateBill.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataProvide.cs" />
     <Compile Include="Faccount.cs">
       <SubType>Form</SubType>
@@ -118,6 +130,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ChangePass.resx">
+      <DependentUpon>ChangePass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateBill.resx">
+      <DependentUpon>CreateBill.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Faccount.resx">
       <DependentUpon>Faccount.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,6 +192,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>QLMT.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\icon].jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

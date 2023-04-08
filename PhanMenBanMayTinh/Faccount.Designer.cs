@@ -32,8 +32,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgv_account = new System.Windows.Forms.DataGridView();
             this.BTN_changePass = new System.Windows.Forms.Button();
-            this.BTN_LogOut = new System.Windows.Forms.Button();
-            this.BTN_ = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_account)).BeginInit();
             this.SuspendLayout();
@@ -63,7 +64,7 @@
             this.dgv_account.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgv_account.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_account.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_account.Location = new System.Drawing.Point(17, 53);
+            this.dgv_account.Location = new System.Drawing.Point(18, 56);
             this.dgv_account.Name = "dgv_account";
             this.dgv_account.Size = new System.Drawing.Size(379, 148);
             this.dgv_account.TabIndex = 2;
@@ -71,7 +72,7 @@
             // 
             // BTN_changePass
             // 
-            this.BTN_changePass.Location = new System.Drawing.Point(190, 246);
+            this.BTN_changePass.Location = new System.Drawing.Point(356, 251);
             this.BTN_changePass.Name = "BTN_changePass";
             this.BTN_changePass.Size = new System.Drawing.Size(79, 36);
             this.BTN_changePass.TabIndex = 2;
@@ -79,34 +80,42 @@
             this.BTN_changePass.UseVisualStyleBackColor = true;
             this.BTN_changePass.Click += new System.EventHandler(this.BTN_changePass_Click);
             // 
-            // BTN_LogOut
+            // button1
             // 
-            this.BTN_LogOut.Location = new System.Drawing.Point(360, 246);
-            this.BTN_LogOut.Name = "BTN_LogOut";
-            this.BTN_LogOut.Size = new System.Drawing.Size(75, 36);
-            this.BTN_LogOut.TabIndex = 3;
-            this.BTN_LogOut.Text = "Đăng xuất";
-            this.BTN_LogOut.UseVisualStyleBackColor = true;
-            this.BTN_LogOut.Click += new System.EventHandler(this.BTN_LogOut_Click);
+            this.button1.Location = new System.Drawing.Point(22, 251);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 36);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Thêm";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // BTN_
+            // button2
             // 
-            this.BTN_.Location = new System.Drawing.Point(39, 246);
-            this.BTN_.Name = "BTN_";
-            this.BTN_.Size = new System.Drawing.Size(75, 36);
-            this.BTN_.TabIndex = 4;
-            this.BTN_.Text = "Chốt ca";
-            this.BTN_.UseVisualStyleBackColor = true;
-            this.BTN_.Click += new System.EventHandler(this.BTN__Click);
+            this.button2.Location = new System.Drawing.Point(130, 251);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 36);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Sửa";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(235, 251);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 36);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Xoá";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // Faccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(456, 316);
-            this.Controls.Add(this.BTN_);
-            this.Controls.Add(this.BTN_LogOut);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.BTN_changePass);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Name = "Faccount";
             this.Text = "Faccount";
@@ -124,7 +133,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgv_account;
         private System.Windows.Forms.Button BTN_changePass;
-        private System.Windows.Forms.Button BTN_LogOut;
-        private System.Windows.Forms.Button BTN_;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

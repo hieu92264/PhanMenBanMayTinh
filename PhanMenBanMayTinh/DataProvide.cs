@@ -40,9 +40,9 @@ namespace PhanMenBanMayTinh
             }
             return data;
         }
-        public int ExcuteScalar(string query) // tra ve so dong thanh cong
+        public object ExcuteScalar(string query) // tra ve so dong thanh cong
         {
-            int data = 0;
+            object data = 0;
             using (SqlConnection connection = new SqlConnection(stringconnection))
             {
                 connection.Open();

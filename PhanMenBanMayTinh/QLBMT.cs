@@ -76,5 +76,11 @@ namespace PhanMenBanMayTinh
                 e.Cancel = true;
             }
         }
+
+        private void Menu_CreateBill_Click(object sender, EventArgs e)
+        {
+            CreateBill frm = new CreateBill();
+            frm.ShowDialog();
+        }
     }
 }

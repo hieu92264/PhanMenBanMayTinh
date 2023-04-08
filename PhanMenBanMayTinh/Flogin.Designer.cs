@@ -37,9 +37,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.text_LoginName = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -48,7 +50,7 @@
             this.panel1.Controls.Add(this.BTN_Login);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(12, 124);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(328, 156);
             this.panel1.TabIndex = 0;
@@ -128,22 +130,38 @@
             this.text_LoginName.TabIndex = 1;
             this.text_LoginName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_LoginName_KeyPress);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.Image = global::PhanMenBanMayTinh.Properties.Resources.icon_;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(328, 106);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // Flogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(352, 181);
+            this.ClientSize = new System.Drawing.Size(352, 292);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
+            this.MaximumSize = new System.Drawing.Size(368, 331);
+            this.MinimumSize = new System.Drawing.Size(368, 331);
             this.Name = "Flogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Flogin_FormClosing);
+            this.Load += new System.EventHandler(this.Flogin_Load);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -159,5 +177,6 @@
         private System.Windows.Forms.TextBox text_LoginName;
         private System.Windows.Forms.Button BTN_LoginExit;
         private System.Windows.Forms.Button BTN_Login;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

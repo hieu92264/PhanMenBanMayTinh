@@ -21,7 +21,6 @@ namespace PhanMenBanMayTinh
             AcceptButton = BTN_Login;
             CancelButton = BTN_LoginExit;
         }
-
         private void Flogin_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult kq;
@@ -38,29 +37,33 @@ namespace PhanMenBanMayTinh
         }
         private void BTN_Login_Click(object sender, EventArgs e)
         {
-            int username = Convert.ToInt32(text_LoginName.Text);
-            string password = text_LoginPass.Text;
-            try
+           if (text_LoginName.Text != "" || text_LoginPass.Text != "")
             {
-                string query = "select *from Accounts where Id = " + username + " and Pass ='" + password + "'";
-                DataProvide dataProvide = new DataProvide();
-                if(dataProvide.ExcuteQuery(query).Rows.Count > 0)
+                int username = Convert.ToInt32(text_LoginName.Text);
+                string password = text_LoginPass.Text;
+                try
                 {
-                    this.Hide();
-                    QLBMT frm = new QLBMT();
-                    frm.ShowDialog();
-                }
-                else
-                {
-                    MessageBox.Show("Tài khoản hoặc mật khẩu không đúng!");
-                }
-               
+                    string query = "select *from Accounts where Id = " + username + " and Pass ='" + password + "'";
+                    DataProvide dataProvide = new DataProvide();
+                    if (dataProvide.ExcuteQuery(query).Rows.Count > 0)
+                    {
+                        this.Hide();
+                        QLBMT frm = new QLBMT();
+                        frm.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Tài khoản hoặc mật khẩu không đúng!");
+                    }
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+           }
+            else MessageBox.Show("Bạn chưa nhập tài khoản hoặc mật khẩu!");
         }
 
         private void text_LoginName_KeyPress(object sender, KeyPressEventArgs e)
@@ -71,6 +74,10 @@ namespace PhanMenBanMayTinh
             }
         }
 
+        private void Flogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
             
 }
