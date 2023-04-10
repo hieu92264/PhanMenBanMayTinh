@@ -18,6 +18,7 @@ namespace PhanMenBanMayTinh
         {
             InitializeComponent();
             this.load_dgv_Home();
+            AcceptButton = BTNSearch;
         }
         public void load_dgv_Home()
         {

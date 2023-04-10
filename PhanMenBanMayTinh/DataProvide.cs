@@ -12,9 +12,9 @@ namespace PhanMenBanMayTinh
     public class DataProvide
     {
 
-        private string stringconnection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\QLMT.mdf;Integrated Security=True";
+        //private string stringconnection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\QLMT.mdf;Integrated Security=True";
         public DataProvide() { }
-        //private string stringconnection = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename="+Application.StartupPath+@"\QLMT.mdf;Integrated Security=True;Connect Timeout=30";
+        private string stringconnection = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename="+Application.StartupPath+@"\QLMT.mdf;Integrated Security=True;Connect Timeout=30";
         public DataTable ExcuteQuery(string query) // tra ve mot bang database
         {
             DataTable data = new DataTable();
@@ -28,7 +28,7 @@ namespace PhanMenBanMayTinh
             }
             return data;
         }
-        public int ExcuteNonQuery(string query) // tra ve so dong thanh cong
+        public void ExcuteNonQuery(string query) // tra ve so dong thanh cong
         {
             int data = 0;
             using (SqlConnection connection = new SqlConnection(stringconnection))
@@ -36,9 +36,14 @@ namespace PhanMenBanMayTinh
                 connection.Open();
                 SqlCommand command = new SqlCommand(query, connection);
                 data = command.ExecuteNonQuery();
+                if (data > 0)
+                {
+                    MessageBox.Show("Thay đổi dữ liệu thành công!");
+                }
+                else MessageBox.Show("Thay đổi dữ liệu thất bại!");
                 connection.Close();
             }
-            return data;
+           // return data;
         }
         public object ExcuteScalar(string query) // tra ve so dong thanh cong
         {
@@ -47,7 +52,7 @@ namespace PhanMenBanMayTinh
             {
                 connection.Open();
                 SqlCommand command = new SqlCommand(query, connection);
-                data = (int)command.ExecuteScalar();
+                data = command.ExecuteScalar();
                 connection.Close();
             }
             return data;
