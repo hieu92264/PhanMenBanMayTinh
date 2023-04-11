@@ -98,6 +98,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BackEnd\FormCenterDAO.cs" />
+    <Compile Include="BackEnd\From Account DA0\AddAccountDAO.cs" />
     <Compile Include="BackEnd\From Account DA0\ChangePassDAO.cs" />
     <Compile Include="BackEnd\LoginDAO.cs" />
     <Compile Include="FrontEnd\From Account\Add_Account.cs">

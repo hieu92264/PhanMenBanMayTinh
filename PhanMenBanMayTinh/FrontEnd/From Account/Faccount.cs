@@ -42,5 +42,10 @@ namespace PhanMenBanMayTinh
             Add_Account frm = new Add_Account();
             frm.ShowDialog();
         }
+
+        private void BTN_Del_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

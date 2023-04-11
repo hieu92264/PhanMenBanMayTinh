@@ -106,6 +106,7 @@
             this.BTN_Del.TabIndex = 5;
             this.BTN_Del.Text = "Xoá";
             this.BTN_Del.UseVisualStyleBackColor = true;
+            this.BTN_Del.Click += new System.EventHandler(this.BTN_Del_Click);
             // 
             // Faccount
             // 

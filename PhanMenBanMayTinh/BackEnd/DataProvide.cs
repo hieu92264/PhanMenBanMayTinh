@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +15,7 @@ namespace PhanMenBanMayTinh
         private string stringconnection = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Admin\\source\\repos\\PhanMenBanMayTinh\\PhanMenBanMayTinh\\DataProvide.mdf;Integrated Security=True";
         //private string stringconnection = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\DataProvide.mdf;Integrated Security=True";
         public DataProvide() {}
-        //private string stringconnection = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename="+Application.StartupPath+@"\QLMT.mdf;Integrated Security=True;Connect Timeout=30";
+        //private string stringconnection = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename="+Path.GetFullPath(C: \Users\Admin\source\repos\PhanMenBanMayTinh\PhanMenBanMayTinh\D) +@"\QLMT.mdf;Integrated Security=True;Connect Timeout=30";
         public DataTable ExecuteQuery(string query) // tra ve mot bang database
         {
             DataTable data = new DataTable();

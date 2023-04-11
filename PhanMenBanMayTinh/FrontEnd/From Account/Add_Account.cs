@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PhanMenBanMayTinh.BackEnd.From_Account_DA0;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,27 +16,16 @@ namespace PhanMenBanMayTinh
         public Add_Account()
         {
             InitializeComponent();
+            AcceptButton = BTN_Add;
         }
 
         private void BTN_Add_Click(object sender, EventArgs e)
         {
-            try
-            {
-                int Id = Convert.ToInt32(textId.Text);
-                string displayname = text_Display_name.Text;
-                string Pass = text_Pass.Text;
-                DataProvide dataProvide = new DataProvide();
-                string query = "insert into Accounts(Id, DisplayName, Pass)\r\nvalues (" + Id + ", N'" + displayname + "', '" + Pass + "');";
-                dataProvide.ExecuteNonQuery(query);
-               /* if (dataProvide.ExcuteNonQuery(query) == 1)
-                {
-                    MessageBox.Show("Thêm thành công!");
-                } */
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            int Id = Convert.ToInt32(textId.Text);
+            string displayname = text_Display_name.Text;
+            string Pass = text_Pass.Text;
+            AddAccountDAO.Instance.Insert_Account(Id, displayname, Pass);
+            this.Close();
         }
     }
 }
