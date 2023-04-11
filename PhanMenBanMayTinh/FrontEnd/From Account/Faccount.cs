@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PhanMenBanMayTinh.BackEnd.From_Account_DA0;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,21 +16,10 @@ namespace PhanMenBanMayTinh
         public Faccount()
         {
             InitializeComponent();
-            this.load_data_account();
+            dgv_account.DataSource = FaccountDAO.Instance.load_data_account();
+            BTN_Del.Enabled = false;
         }
-        public void load_data_account()
-        {
-            try
-            {
-                string query = "select Id, DisplayName from Accounts";
-                DataProvide dataProvide = new DataProvide();
-                dgv_account.DataSource=dataProvide.ExecuteQuery(query);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
+        
 
         private void BTN_changePass_Click(object sender, EventArgs e)
         {
@@ -45,7 +35,23 @@ namespace PhanMenBanMayTinh
 
         private void BTN_Del_Click(object sender, EventArgs e)
         {
-            
+            if(dgv_account.SelectedRows.Count > 0) // selectedRow la list cac hang dc chon
+            {
+                // selectedCell la mot list cac o (cot) dc chon trong list cac hang dc chon
+                int RowIndex = dgv_account.SelectedCells[1].RowIndex;
+                int Id = Convert.ToInt32(dgv_account.Rows[RowIndex].Cells[0].Value.ToString());
+                //dgv_account.Rows[RowIndex].Cells[0].Value.ToString() lay gia tri cua cell dau tien trong cac dong dc chon
+                FaccountDAO.Instance.del_data_account(Id);
+                dgv_account.Rows.RemoveAt(RowIndex);
+            }
+        }
+
+        private void dgv_account_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if(dgv_account.SelectedRows.Count > 0)
+            {
+                BTN_Del.Enabled = true;
+            }
         }
     }
 }
