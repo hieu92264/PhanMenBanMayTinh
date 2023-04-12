@@ -1,4 +1,5 @@
-﻿using PhanMenBanMayTinh.BackEnd.From_Account_DA0;
+﻿using PhanMenBanMayTinh.BackEnd;
+using PhanMenBanMayTinh.BackEnd.From_Account_DA0;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,7 @@ namespace PhanMenBanMayTinh
             InitializeComponent();
             dgv_account.DataSource = FaccountDAO.Instance.load_data_account();
             BTN_Del.Enabled = false;
+            this.Load_type();
         }
         
 
@@ -31,6 +33,16 @@ namespace PhanMenBanMayTinh
         {
             Add_Account frm = new Add_Account();
             frm.ShowDialog();
+        }
+        private void Load_type()
+        {
+            int type = LoginDAO.Instance.type;
+            if (type == 0)
+            {
+                BTN_Add.Enabled = false;
+                BTN_Del.Enabled=false;
+                BTN_Reset.Enabled=false;
+            }
         }
 
         private void BTN_Del_Click(object sender, EventArgs e)

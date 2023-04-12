@@ -32,7 +32,7 @@ namespace PhanMenBanMayTinh.BackEnd.From_Account_DA0
             }
             return data;
         }
-
+        
         public void del_data_account(int Id)
         {
             string query = "DELETE FROM Accounts WHERE ID =" + Id + "";

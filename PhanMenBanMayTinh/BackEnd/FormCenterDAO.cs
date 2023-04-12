@@ -40,5 +40,46 @@ namespace PhanMenBanMayTinh.BackEnd
             data = dataProvide.ExecuteQuery(query);
             return data;
         }
+        public DataTable find_vostro()
+        {
+            DataTable data = null;
+            string query = "select *from Products where ProductName like '%vostro%'";
+            DataProvide dataProvide = new DataProvide();
+            data = dataProvide.ExecuteQuery(query);
+            return data;
+        }
+        public DataTable find_Latidue()
+        {
+            DataTable data = null;
+            string query = "select *from Products where ProductName like '%latidue%'";
+            DataProvide dataProvide = new DataProvide();
+            data = dataProvide.ExecuteQuery(query);
+            //MessageBox.Show("Tìm thành công");
+            return data;
+        }
+        public DataTable find_Inspiron()
+        {
+            DataTable data = null;
+            string query = "select *from Products where ProductName like '%inspiron%'";
+            DataProvide dataProvide = new DataProvide();
+            data = dataProvide.ExecuteQuery(query);
+            return data;
+        }
+        public DataTable find_All_Products_Dell()
+        {
+            DataTable data = null;
+            string query = "select *from Products where ProductName like '%Dell%'";
+            DataProvide dataProvide = new DataProvide();
+            data = dataProvide.ExecuteQuery(query);
+            return data;
+        }
+        public DataTable find_All_Products_Accer()
+        {
+            DataTable data = null;
+            string query = "select *from Products where ProductName like '%Accer%'";
+            DataProvide dataProvide = new DataProvide();
+            data = dataProvide.ExecuteQuery(query);
+            return data;
+        }
     }
 }

@@ -43,6 +43,7 @@ namespace PhanMenBanMayTinh
                 int username = Convert.ToInt32(text_LoginName.Text);
                 string password = text_LoginPass.Text;
                 if(LoginDAO.Instance.Check_Account(username, password)) {
+                    LoginDAO.Instance.get_type(username);
                     this.Hide();
                     QLBMT frm = new QLBMT();
                     frm.ShowDialog();

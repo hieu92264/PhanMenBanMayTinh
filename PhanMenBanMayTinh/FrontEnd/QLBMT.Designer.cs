@@ -31,17 +31,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QLBMT));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.MenuProduct = new System.Windows.Forms.ToolStripMenuItem();
+            this.TS_All_Products = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu_Product_Dell = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStrip_Vostro = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStrip_Latidue = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStrip_Inspiron = new System.Windows.Forms.ToolStripMenuItem();
-            this.chỉnhSửaThôngTinSảnPhẩmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TS_Vostro = new System.Windows.Forms.ToolStripMenuItem();
+            this.TS_Latidue = new System.Windows.Forms.ToolStripMenuItem();
+            this.TS_Inspiron = new System.Windows.Forms.ToolStripMenuItem();
+            this.TS_fix_product = new System.Windows.Forms.ToolStripMenuItem();
+            this.TS_Accer = new System.Windows.Forms.ToolStripMenuItem();
             this.Tooltrip_Account = new System.Windows.Forms.ToolStripMenuItem();
             this.hoáĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu_CreateBill = new System.Windows.Forms.ToolStripMenuItem();
-            this.chỉnhSửaHoáĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xemThôngTinBánHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thốngKêTàiChínhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TS_Update_Bill = new System.Windows.Forms.ToolStripMenuItem();
+            this.TS_View_Infor_Bill = new System.Windows.Forms.ToolStripMenuItem();
+            this.TS_financial_statistics = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textSearch = new System.Windows.Forms.TextBox();
             this.BTNSearch = new System.Windows.Forms.Button();
@@ -69,45 +71,79 @@
             // MenuProduct
             // 
             this.MenuProduct.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TS_All_Products,
             this.Menu_Product_Dell,
-            this.chỉnhSửaThôngTinSảnPhẩmToolStripMenuItem});
+            this.TS_fix_product,
+            this.TS_Accer});
             this.MenuProduct.Name = "MenuProduct";
             this.MenuProduct.Size = new System.Drawing.Size(72, 20);
             this.MenuProduct.Text = "Sản phẩm";
             // 
+            // TS_All_Products
+            // 
+            this.TS_All_Products.Checked = true;
+            this.TS_All_Products.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.TS_All_Products.Name = "TS_All_Products";
+            this.TS_All_Products.Size = new System.Drawing.Size(234, 22);
+            this.TS_All_Products.Text = "Tất cả sản phẩm";
+            this.TS_All_Products.Click += new System.EventHandler(this.TS_All_Products_Click);
+            // 
             // Menu_Product_Dell
             // 
+            this.Menu_Product_Dell.Checked = true;
+            this.Menu_Product_Dell.CheckState = System.Windows.Forms.CheckState.Checked;
             this.Menu_Product_Dell.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolStrip_Vostro,
-            this.ToolStrip_Latidue,
-            this.ToolStrip_Inspiron});
+            this.TS_Vostro,
+            this.TS_Latidue,
+            this.TS_Inspiron});
             this.Menu_Product_Dell.Name = "Menu_Product_Dell";
             this.Menu_Product_Dell.Size = new System.Drawing.Size(234, 22);
             this.Menu_Product_Dell.Text = "Laptop Dell";
+            this.Menu_Product_Dell.Click += new System.EventHandler(this.Menu_Product_Dell_Click);
             // 
-            // ToolStrip_Vostro
+            // TS_Vostro
             // 
-            this.ToolStrip_Vostro.Name = "ToolStrip_Vostro";
-            this.ToolStrip_Vostro.Size = new System.Drawing.Size(140, 22);
-            this.ToolStrip_Vostro.Text = "Dell Vostro";
+            this.TS_Vostro.Checked = true;
+            this.TS_Vostro.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.TS_Vostro.Name = "TS_Vostro";
+            this.TS_Vostro.Size = new System.Drawing.Size(140, 22);
+            this.TS_Vostro.Text = "Dell Vostro";
+            this.TS_Vostro.Click += new System.EventHandler(this.TS_Vostro_Click);
             // 
-            // ToolStrip_Latidue
+            // TS_Latidue
             // 
-            this.ToolStrip_Latidue.Name = "ToolStrip_Latidue";
-            this.ToolStrip_Latidue.Size = new System.Drawing.Size(140, 22);
-            this.ToolStrip_Latidue.Text = "Dell Latidue";
+            this.TS_Latidue.Checked = true;
+            this.TS_Latidue.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.TS_Latidue.Name = "TS_Latidue";
+            this.TS_Latidue.Size = new System.Drawing.Size(140, 22);
+            this.TS_Latidue.Text = "Dell Latidue";
+            this.TS_Latidue.Click += new System.EventHandler(this.TS_Latidue_Click);
             // 
-            // ToolStrip_Inspiron
+            // TS_Inspiron
             // 
-            this.ToolStrip_Inspiron.Name = "ToolStrip_Inspiron";
-            this.ToolStrip_Inspiron.Size = new System.Drawing.Size(140, 22);
-            this.ToolStrip_Inspiron.Text = "Dell Inspiron";
+            this.TS_Inspiron.Checked = true;
+            this.TS_Inspiron.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.TS_Inspiron.Name = "TS_Inspiron";
+            this.TS_Inspiron.Size = new System.Drawing.Size(140, 22);
+            this.TS_Inspiron.Text = "Dell Inspiron";
+            this.TS_Inspiron.Click += new System.EventHandler(this.TS_Inspiron_Click);
             // 
-            // chỉnhSửaThôngTinSảnPhẩmToolStripMenuItem
+            // TS_fix_product
             // 
-            this.chỉnhSửaThôngTinSảnPhẩmToolStripMenuItem.Name = "chỉnhSửaThôngTinSảnPhẩmToolStripMenuItem";
-            this.chỉnhSửaThôngTinSảnPhẩmToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
-            this.chỉnhSửaThôngTinSảnPhẩmToolStripMenuItem.Text = "Chỉnh sửa thông tin sản phẩm";
+            this.TS_fix_product.Checked = true;
+            this.TS_fix_product.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.TS_fix_product.Name = "TS_fix_product";
+            this.TS_fix_product.Size = new System.Drawing.Size(234, 22);
+            this.TS_fix_product.Text = "Chỉnh sửa thông tin sản phẩm";
+            // 
+            // TS_Accer
+            // 
+            this.TS_Accer.Checked = true;
+            this.TS_Accer.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.TS_Accer.Name = "TS_Accer";
+            this.TS_Accer.Size = new System.Drawing.Size(234, 22);
+            this.TS_Accer.Text = "Laptop Accer";
+            this.TS_Accer.Click += new System.EventHandler(this.TS_Accer_Click);
             // 
             // Tooltrip_Account
             // 
@@ -120,9 +156,9 @@
             // 
             this.hoáĐơnToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Menu_CreateBill,
-            this.chỉnhSửaHoáĐơnToolStripMenuItem,
-            this.xemThôngTinBánHàngToolStripMenuItem,
-            this.thốngKêTàiChínhToolStripMenuItem});
+            this.TS_Update_Bill,
+            this.TS_View_Infor_Bill,
+            this.TS_financial_statistics});
             this.hoáĐơnToolStripMenuItem.Name = "hoáĐơnToolStripMenuItem";
             this.hoáĐơnToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.hoáĐơnToolStripMenuItem.Text = "Hoá đơn";
@@ -134,23 +170,23 @@
             this.Menu_CreateBill.Text = "Tạo hoá đơn";
             this.Menu_CreateBill.Click += new System.EventHandler(this.Menu_CreateBill_Click);
             // 
-            // chỉnhSửaHoáĐơnToolStripMenuItem
+            // TS_Update_Bill
             // 
-            this.chỉnhSửaHoáĐơnToolStripMenuItem.Name = "chỉnhSửaHoáĐơnToolStripMenuItem";
-            this.chỉnhSửaHoáĐơnToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.chỉnhSửaHoáĐơnToolStripMenuItem.Text = "Chỉnh sửa hoá đơn";
+            this.TS_Update_Bill.Name = "TS_Update_Bill";
+            this.TS_Update_Bill.Size = new System.Drawing.Size(203, 22);
+            this.TS_Update_Bill.Text = "Chỉnh sửa hoá đơn";
             // 
-            // xemThôngTinBánHàngToolStripMenuItem
+            // TS_View_Infor_Bill
             // 
-            this.xemThôngTinBánHàngToolStripMenuItem.Name = "xemThôngTinBánHàngToolStripMenuItem";
-            this.xemThôngTinBánHàngToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.xemThôngTinBánHàngToolStripMenuItem.Text = "Xem thông tin bán hàng";
+            this.TS_View_Infor_Bill.Name = "TS_View_Infor_Bill";
+            this.TS_View_Infor_Bill.Size = new System.Drawing.Size(203, 22);
+            this.TS_View_Infor_Bill.Text = "Xem thông tin bán hàng";
             // 
-            // thốngKêTàiChínhToolStripMenuItem
+            // TS_financial_statistics
             // 
-            this.thốngKêTàiChínhToolStripMenuItem.Name = "thốngKêTàiChínhToolStripMenuItem";
-            this.thốngKêTàiChínhToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.thốngKêTàiChínhToolStripMenuItem.Text = "Thống kê tài chính";
+            this.TS_financial_statistics.Name = "TS_financial_statistics";
+            this.TS_financial_statistics.Size = new System.Drawing.Size(203, 22);
+            this.TS_financial_statistics.Text = "Thống kê tài chính";
             // 
             // đăngXuấtToolStripMenuItem
             // 
@@ -236,9 +272,9 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem MenuProduct;
         private System.Windows.Forms.ToolStripMenuItem Menu_Product_Dell;
-        private System.Windows.Forms.ToolStripMenuItem ToolStrip_Vostro;
-        private System.Windows.Forms.ToolStripMenuItem ToolStrip_Latidue;
-        private System.Windows.Forms.ToolStripMenuItem ToolStrip_Inspiron;
+        private System.Windows.Forms.ToolStripMenuItem TS_Vostro;
+        private System.Windows.Forms.ToolStripMenuItem TS_Latidue;
+        private System.Windows.Forms.ToolStripMenuItem TS_Inspiron;
         private System.Windows.Forms.ToolStripMenuItem Tooltrip_Account;
         private System.Windows.Forms.TextBox textSearch;
         private System.Windows.Forms.Button BTNSearch;
@@ -246,12 +282,14 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgv_Home;
         private System.Windows.Forms.ToolStripMenuItem hoáĐơnToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem chỉnhSửaThôngTinSảnPhẩmToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem TS_fix_product;
         private System.Windows.Forms.ToolStripMenuItem Menu_CreateBill;
-        private System.Windows.Forms.ToolStripMenuItem chỉnhSửaHoáĐơnToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem xemThôngTinBánHàngToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem TS_Update_Bill;
+        private System.Windows.Forms.ToolStripMenuItem TS_View_Infor_Bill;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem thốngKêTàiChínhToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem TS_financial_statistics;
+        private System.Windows.Forms.ToolStripMenuItem TS_All_Products;
+        private System.Windows.Forms.ToolStripMenuItem TS_Accer;
     }
 }
 
