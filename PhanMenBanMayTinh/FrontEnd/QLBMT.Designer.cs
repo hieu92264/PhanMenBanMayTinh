@@ -37,6 +37,8 @@
             this.TS_Latidue = new System.Windows.Forms.ToolStripMenuItem();
             this.TS_Inspiron = new System.Windows.Forms.ToolStripMenuItem();
             this.TS_fix_product = new System.Windows.Forms.ToolStripMenuItem();
+            this.TS_AddProducts = new System.Windows.Forms.ToolStripMenuItem();
+            this.TS_UpdateProduct = new System.Windows.Forms.ToolStripMenuItem();
             this.TS_Accer = new System.Windows.Forms.ToolStripMenuItem();
             this.Tooltrip_Account = new System.Windows.Forms.ToolStripMenuItem();
             this.hoáĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -132,9 +134,29 @@
             // 
             this.TS_fix_product.Checked = true;
             this.TS_fix_product.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.TS_fix_product.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TS_AddProducts,
+            this.TS_UpdateProduct});
             this.TS_fix_product.Name = "TS_fix_product";
             this.TS_fix_product.Size = new System.Drawing.Size(234, 22);
             this.TS_fix_product.Text = "Chỉnh sửa thông tin sản phẩm";
+            // 
+            // TS_AddProducts
+            // 
+            this.TS_AddProducts.Checked = true;
+            this.TS_AddProducts.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.TS_AddProducts.Name = "TS_AddProducts";
+            this.TS_AddProducts.Size = new System.Drawing.Size(182, 22);
+            this.TS_AddProducts.Text = "Thêm sản phẩm";
+            this.TS_AddProducts.Click += new System.EventHandler(this.TS_AddProducts_Click);
+            // 
+            // TS_UpdateProduct
+            // 
+            this.TS_UpdateProduct.Checked = true;
+            this.TS_UpdateProduct.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.TS_UpdateProduct.Name = "TS_UpdateProduct";
+            this.TS_UpdateProduct.Size = new System.Drawing.Size(182, 22);
+            this.TS_UpdateProduct.Text = "Chỉnh sửa sản phẩm";
             // 
             // TS_Accer
             // 
@@ -236,11 +258,14 @@
             this.dgv_Home.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Home.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgv_Home.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_Home.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Home.ColumnHeadersHeight = 30;
+            this.dgv_Home.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgv_Home.ColumnHeadersVisible = false;
             this.dgv_Home.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgv_Home.GridColor = System.Drawing.Color.DarkGray;
             this.dgv_Home.Location = new System.Drawing.Point(0, 193);
             this.dgv_Home.Name = "dgv_Home";
+            this.dgv_Home.RowTemplate.Height = 70;
             this.dgv_Home.Size = new System.Drawing.Size(872, 429);
             this.dgv_Home.TabIndex = 5;
             // 
@@ -253,10 +278,13 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(888, 661);
+            this.MinimumSize = new System.Drawing.Size(888, 661);
             this.Name = "QLBMT";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý bán máy tính";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.QLBMT_FormClosing);
+            this.Load += new System.EventHandler(this.QLBMT_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -290,6 +318,8 @@
         private System.Windows.Forms.ToolStripMenuItem TS_financial_statistics;
         private System.Windows.Forms.ToolStripMenuItem TS_All_Products;
         private System.Windows.Forms.ToolStripMenuItem TS_Accer;
+        private System.Windows.Forms.ToolStripMenuItem TS_AddProducts;
+        private System.Windows.Forms.ToolStripMenuItem TS_UpdateProduct;
     }
 }
 

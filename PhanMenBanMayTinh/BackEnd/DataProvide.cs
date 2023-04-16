@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -43,7 +44,6 @@ namespace PhanMenBanMayTinh
                 MessageBox.Show(ex.Message);
                
             }
-           // return data;
         }
         public object ExcuteScalar(string query) // tra ve so dong thanh cong
         {
@@ -57,6 +57,35 @@ namespace PhanMenBanMayTinh
             }
             return data;
         }
+        public void ExctueNonQuery1(string query, object[] parameter = null)
+        {
+            SqlConnection connection = new SqlConnection(stringconnection);
+            try
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand(query, connection);
+                if(parameter != null)
+                {
+                    string[] listpara = query.Split(' ');
+                    int i = 0;
+                    foreach (string s in listpara)
+                    {
+                        if(s.Contains("@"))
+                        {
+                            command.Parameters.AddWithValue(s, parameter[i]);
+                            i++;
+                        }
+                    }
+                }
+                command.ExecuteNonQuery();
+                MessageBox.Show("Thay đổi dữ liệu thành công!");
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
 
+            }
+        }
     }
 }

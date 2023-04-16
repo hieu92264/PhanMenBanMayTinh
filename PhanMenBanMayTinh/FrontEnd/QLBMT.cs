@@ -1,10 +1,12 @@
 ﻿using PhanMenBanMayTinh.BackEnd;
+using PhanMenBanMayTinh.FrontEnd.Form_Products;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,7 +20,6 @@ namespace PhanMenBanMayTinh
         public QLBMT()
         {
             InitializeComponent();
-            this.load_dgv_Home();
             AcceptButton = BTNSearch;
             if (LoginDAO.Instance.type == 0)
             {
@@ -98,7 +99,7 @@ namespace PhanMenBanMayTinh
 
         private void TS_All_Products_Click(object sender, EventArgs e)
         {
-            if(TS_All_Products.Checked)
+            if (TS_All_Products.Checked)
             {
                 this.load_dgv_Home();
             }
@@ -106,7 +107,8 @@ namespace PhanMenBanMayTinh
 
         private void Menu_Product_Dell_Click(object sender, EventArgs e)
         {
-            if(TS_All_Products.Checked) {
+            if (TS_All_Products.Checked)
+            {
                 dgv_Home.DataSource = FormCenterDAO.Instance.find_All_Products_Dell();
             }
         }
@@ -118,6 +120,20 @@ namespace PhanMenBanMayTinh
                 dgv_Home.DataSource = FormCenterDAO.Instance.find_All_Products_Accer();
             }
 
+        }
+
+        private void TS_AddProducts_Click(object sender, EventArgs e)
+        {
+            AddProducts addProducts = new AddProducts();
+            addProducts.ShowDialog();
+        }
+
+        private void QLBMT_Load(object sender, EventArgs e)
+        {
+            this.load_dgv_Home();
+            DataGridViewImageColumn pic = new DataGridViewImageColumn();
+            pic = (DataGridViewImageColumn)dgv_Home.Columns[2];
+            pic.ImageLayout = DataGridViewImageCellLayout.Zoom;
         }
     }
 }
