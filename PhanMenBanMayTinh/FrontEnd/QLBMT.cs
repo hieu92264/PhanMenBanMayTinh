@@ -17,6 +17,7 @@ namespace PhanMenBanMayTinh
 {
     public partial class QLBMT : Form
     {
+        public bool isClose = true;
         public QLBMT()
         {
             InitializeComponent();
@@ -54,11 +55,14 @@ namespace PhanMenBanMayTinh
 
         private void QLBMT_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult kq;
-            kq = MessageBox.Show("Bạn có thực sự muốn thoát?", "Thông báo!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            if (kq != DialogResult.OK)
+            if (isClose)
             {
-                e.Cancel = true;
+                DialogResult kq;
+                kq = MessageBox.Show("Bạn có thực sự muốn thoát?", "Thông báo!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (kq != DialogResult.OK)
+                {
+                    e.Cancel = true;
+                }
             }
         }
 
@@ -134,6 +138,23 @@ namespace PhanMenBanMayTinh
         {
             AddProducts addProducts = new AddProducts();
             addProducts.ShowDialog();
+        }
+
+        private void TS_LogOut_Click(object sender, EventArgs e)
+        {
+            DialogResult kq = MessageBox.Show("Bạn có muốn đăng xuất?", "Thông báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (kq == DialogResult.Yes)
+            {
+                isClose = false;
+                Flogin frm = new Flogin();
+                this.Close();
+                frm.ShowDialog();
+            }
+        }
+
+        private void QLBMT_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if(isClose) Application.Exit();
         }
     }
 }

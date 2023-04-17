@@ -22,7 +22,7 @@ namespace PhanMenBanMayTinh
             AcceptButton = BTN_Login;
             CancelButton = BTN_LoginExit;
         }
-        private void Flogin_FormClosing(object sender, FormClosingEventArgs e)
+       /* private void Flogin_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult kq;
             kq = MessageBox.Show("Bạn có thực sự muốn thoát?", "Thông báo!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
@@ -30,7 +30,7 @@ namespace PhanMenBanMayTinh
             {
                 e.Cancel = true;
             }
-        }
+        } */
 
         private void BTN_LoginExit_Click(object sender, EventArgs e)
         {
@@ -38,7 +38,7 @@ namespace PhanMenBanMayTinh
         }
         private void BTN_Login_Click(object sender, EventArgs e)
         {
-           if (text_LoginName.Text != "" || text_LoginPass.Text != "")
+            if (text_LoginName.Text != "" || text_LoginPass.Text != "")
             {
                 int username = Convert.ToInt32(text_LoginName.Text);
                 string password = text_LoginPass.Text;
@@ -46,7 +46,8 @@ namespace PhanMenBanMayTinh
                     LoginDAO.Instance.get_type(username);
                     this.Hide();
                     QLBMT frm = new QLBMT();
-                    frm.ShowDialog();
+                    frm.Show();
+                    
                 }
             }
             else MessageBox.Show("Bạn chưa nhập tài khoản hoặc mật khẩu!");
@@ -58,6 +59,10 @@ namespace PhanMenBanMayTinh
             {
                 e.Handled = false;
             }
+        }
+        public void formshow()
+        {
+            this.ShowDialog();
         }
 
     }

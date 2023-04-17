@@ -44,7 +44,7 @@
             this.TS_Update_Bill = new System.Windows.Forms.ToolStripMenuItem();
             this.TS_View_Infor_Bill = new System.Windows.Forms.ToolStripMenuItem();
             this.TS_financial_statistics = new System.Windows.Forms.ToolStripMenuItem();
-            this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TS_LogOut = new System.Windows.Forms.ToolStripMenuItem();
             this.textSearch = new System.Windows.Forms.TextBox();
             this.BTNSearch = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -61,7 +61,7 @@
             this.MenuProduct,
             this.Tooltrip_Account,
             this.hoáĐơnToolStripMenuItem,
-            this.đăngXuấtToolStripMenuItem});
+            this.TS_LogOut});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(872, 24);
@@ -189,11 +189,12 @@
             this.TS_financial_statistics.Size = new System.Drawing.Size(203, 22);
             this.TS_financial_statistics.Text = "Thống kê tài chính";
             // 
-            // đăngXuấtToolStripMenuItem
+            // TS_LogOut
             // 
-            this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
-            this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
+            this.TS_LogOut.Name = "TS_LogOut";
+            this.TS_LogOut.Size = new System.Drawing.Size(73, 20);
+            this.TS_LogOut.Text = "Đăng xuất";
+            this.TS_LogOut.Click += new System.EventHandler(this.TS_LogOut_Click);
             // 
             // textSearch
             // 
@@ -262,7 +263,7 @@
             this.Name = "QLBMT";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý bán máy tính";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.QLBMT_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.QLBMT_FormClosed);
             this.Load += new System.EventHandler(this.QLBMT_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -293,7 +294,7 @@
         private System.Windows.Forms.ToolStripMenuItem Menu_CreateBill;
         private System.Windows.Forms.ToolStripMenuItem TS_Update_Bill;
         private System.Windows.Forms.ToolStripMenuItem TS_View_Infor_Bill;
-        private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem TS_LogOut;
         private System.Windows.Forms.ToolStripMenuItem TS_financial_statistics;
         private System.Windows.Forms.ToolStripMenuItem TS_All_Products;
         private System.Windows.Forms.ToolStripMenuItem TS_Accer;
