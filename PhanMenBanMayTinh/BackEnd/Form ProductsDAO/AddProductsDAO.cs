@@ -43,5 +43,17 @@ namespace PhanMenBanMayTinh.BackEnd.Form_ProductsDAO
             DataProvide dataProvide = new DataProvide();
             dataProvide.ExecuteNonQuery(query);
         }
+        public void Update_Product(int Id, string Name, byte[] img, int sl, string mota, decimal giaban)
+        {
+            string query = "update Products set ProductName = @Name , ProductImage = @img , Quantity = @sl , MoTa = @mota , GiaBan = @giaban where Id = @Id ";
+            DataProvide dataProvide = new DataProvide();
+            dataProvide.ExctueNonQuery1(query, new object[] { Name, img, sl, mota, giaban, Id });
+        }
+        public void Update_Product1(int Id, string Name, int sl, string mota, decimal giaban)
+        {
+            string query = "update Products set ProductName = @Name , ProductImage = @img , Quantity = @sl , MoTa = @mota , GiaBan = @giaban where Id = @Id ";
+            DataProvide dataProvide = new DataProvide();
+            dataProvide.ExctueNonQuery1(query, new object[] { Name, sl, mota, giaban, Id });
+        }
     }
 }

@@ -14,12 +14,17 @@ namespace PhanMenBanMayTinh
 {
     public partial class Faccount : Form
     {
+        
         public Faccount()
         {
             InitializeComponent();
             dgv_account.DataSource = FaccountDAO.Instance.load_data_account();
             BTN_Del.Enabled = false;
             this.Load_type();
+            BTN_Reset.Enabled = false;
+            txt_Id.DataBindings.Add(new Binding("Text", dgv_account.DataSource, "Id"));
+            txt_DisplayName.DataBindings.Add(new Binding("Text", dgv_account.DataSource, "DisplayName"));
+            txt_type.DataBindings.Add(new Binding("Text", dgv_account.DataSource, "Type"));
         }
         
 
@@ -65,5 +70,20 @@ namespace PhanMenBanMayTinh
                 BTN_Del.Enabled = true;
             }
         }
+
+        private void BTN_Reset_Click(object sender, EventArgs e)
+        {
+            FaccountDAO.Instance.update_Account(txt_type.Text, txt_DisplayName.Text, txt_Id.Text);
+            
+        }
+
+        private void dgv_account_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(dgv_account.SelectedCells.Count > 0)
+            {
+                BTN_Reset.Enabled = true;
+            }
+        }
+
     }
 }

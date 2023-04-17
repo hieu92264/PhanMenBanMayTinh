@@ -73,10 +73,10 @@ namespace PhanMenBanMayTinh.BackEnd
             data = dataProvide.ExecuteQuery(query);
             return data;
         }
-        public DataTable find_All_Products_Accer()
+        public DataTable find_All_Products_Acer()
         {
             DataTable data = null;
-            string query = "select *from Products where ProductName like '%Accer%'";
+            string query = "select *from Products where ProductName like '%Acer%'";
             DataProvide dataProvide = new DataProvide();
             data = dataProvide.ExecuteQuery(query);
             return data;

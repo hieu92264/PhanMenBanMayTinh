@@ -110,7 +110,6 @@ namespace PhanMenBanMayTinh.FrontEnd.Form_Products
         {
             if(dgv_product.SelectedRows.Count > 0)
             {
-                BTN_Update.Enabled = true;
                 BTN_Del.Enabled = true;
             }
         }
@@ -122,6 +121,37 @@ namespace PhanMenBanMayTinh.FrontEnd.Form_Products
             if(kq == DialogResult.Yes)
             {
                 AddProductsDAO.Instance.del_Products(Convert.ToInt32(txt_Id.Text));
+            }
+        }
+
+        private void dgv_product_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            BTN_Update.Enabled = true;
+            txt_Id.ReadOnly = true;
+        }
+
+        private void BTN_Update_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int Id = Convert.ToInt32(txt_Id.Text);
+                string name = txt_Name.Text;
+                string path = txt_Image.Text;
+                int sl = Convert.ToInt32(txt_Quantity.Text);
+                string mota = txt_mota.Text;
+                decimal giaban = Convert.ToDecimal(txt_price.Text);
+                if (path != "")
+                {
+                    byte[] img = File.ReadAllBytes(path); //convertImgToByte
+                    AddProductsDAO.Instance.Update_Product(Id, name, img, sl, mota, giaban);
+                } else
+                {
+                    AddProductsDAO.Instance.Update_Product1(Id, name, sl, mota, giaban);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

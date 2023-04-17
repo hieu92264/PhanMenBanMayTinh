@@ -117,15 +117,9 @@ namespace PhanMenBanMayTinh
         {
             if (TS_Accer.Checked)
             {
-                dgv_Home.DataSource = FormCenterDAO.Instance.find_All_Products_Accer();
+                dgv_Home.DataSource = FormCenterDAO.Instance.find_All_Products_Acer();
             }
 
-        }
-
-        private void TS_AddProducts_Click(object sender, EventArgs e)
-        {
-            AddProducts addProducts = new AddProducts();
-            addProducts.ShowDialog();
         }
 
         private void QLBMT_Load(object sender, EventArgs e)
@@ -134,6 +128,12 @@ namespace PhanMenBanMayTinh
             DataGridViewImageColumn pic = new DataGridViewImageColumn();
             pic = (DataGridViewImageColumn)dgv_Home.Columns[2];
             pic.ImageLayout = DataGridViewImageCellLayout.Zoom;
+        }
+
+        private void TS_fix_product_Click(object sender, EventArgs e)
+        {
+            AddProducts addProducts = new AddProducts();
+            addProducts.ShowDialog();
         }
     }
 }

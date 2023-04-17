@@ -37,8 +37,6 @@
             this.TS_Latidue = new System.Windows.Forms.ToolStripMenuItem();
             this.TS_Inspiron = new System.Windows.Forms.ToolStripMenuItem();
             this.TS_fix_product = new System.Windows.Forms.ToolStripMenuItem();
-            this.TS_AddProducts = new System.Windows.Forms.ToolStripMenuItem();
-            this.TS_UpdateProduct = new System.Windows.Forms.ToolStripMenuItem();
             this.TS_Accer = new System.Windows.Forms.ToolStripMenuItem();
             this.Tooltrip_Account = new System.Windows.Forms.ToolStripMenuItem();
             this.hoáĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -134,29 +132,10 @@
             // 
             this.TS_fix_product.Checked = true;
             this.TS_fix_product.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.TS_fix_product.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.TS_AddProducts,
-            this.TS_UpdateProduct});
             this.TS_fix_product.Name = "TS_fix_product";
             this.TS_fix_product.Size = new System.Drawing.Size(234, 22);
             this.TS_fix_product.Text = "Chỉnh sửa thông tin sản phẩm";
-            // 
-            // TS_AddProducts
-            // 
-            this.TS_AddProducts.Checked = true;
-            this.TS_AddProducts.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.TS_AddProducts.Name = "TS_AddProducts";
-            this.TS_AddProducts.Size = new System.Drawing.Size(182, 22);
-            this.TS_AddProducts.Text = "Thêm sản phẩm";
-            this.TS_AddProducts.Click += new System.EventHandler(this.TS_AddProducts_Click);
-            // 
-            // TS_UpdateProduct
-            // 
-            this.TS_UpdateProduct.Checked = true;
-            this.TS_UpdateProduct.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.TS_UpdateProduct.Name = "TS_UpdateProduct";
-            this.TS_UpdateProduct.Size = new System.Drawing.Size(182, 22);
-            this.TS_UpdateProduct.Text = "Chỉnh sửa sản phẩm";
+            this.TS_fix_product.Click += new System.EventHandler(this.TS_fix_product_Click);
             // 
             // TS_Accer
             // 
@@ -164,7 +143,7 @@
             this.TS_Accer.CheckState = System.Windows.Forms.CheckState.Checked;
             this.TS_Accer.Name = "TS_Accer";
             this.TS_Accer.Size = new System.Drawing.Size(234, 22);
-            this.TS_Accer.Text = "Laptop Accer";
+            this.TS_Accer.Text = "Laptop Acer";
             this.TS_Accer.Click += new System.EventHandler(this.TS_Accer_Click);
             // 
             // Tooltrip_Account
@@ -318,8 +297,6 @@
         private System.Windows.Forms.ToolStripMenuItem TS_financial_statistics;
         private System.Windows.Forms.ToolStripMenuItem TS_All_Products;
         private System.Windows.Forms.ToolStripMenuItem TS_Accer;
-        private System.Windows.Forms.ToolStripMenuItem TS_AddProducts;
-        private System.Windows.Forms.ToolStripMenuItem TS_UpdateProduct;
     }
 }
 

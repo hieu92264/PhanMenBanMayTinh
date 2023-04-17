@@ -201,6 +201,7 @@
             this.BTN_Update.TabIndex = 16;
             this.BTN_Update.Text = "Sửa";
             this.BTN_Update.UseVisualStyleBackColor = true;
+            this.BTN_Update.Click += new System.EventHandler(this.BTN_Update_Click);
             // 
             // BTN_Exit
             // 
@@ -231,6 +232,7 @@
             this.dgv_product.Name = "dgv_product";
             this.dgv_product.Size = new System.Drawing.Size(544, 248);
             this.dgv_product.TabIndex = 19;
+            this.dgv_product.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_product_CellClick);
             this.dgv_product.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_product_RowHeaderMouseClick);
             // 
             // AddProducts
